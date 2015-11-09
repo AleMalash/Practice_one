@@ -32,6 +32,7 @@ public abstract class Model {
         for (int count = 0; count < temp.size(); count ++){
             content.add(temp.get(count));
         }
+        calculateweight();
     }
 
     public void calculateweight(){
