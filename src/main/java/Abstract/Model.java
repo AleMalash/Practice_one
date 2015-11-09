@@ -36,7 +36,7 @@ public abstract class Model {
     }
 
     public void calculateweight(){
-        this.weight = content.size() * 1.8;
+        this.weight = content.size() * 1.65;
     }
 
     public double getWeight(){return weight;}
