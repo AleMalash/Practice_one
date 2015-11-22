@@ -14,4 +14,9 @@ public class Butterfly extends Model implements Body, Head, Wings {
     public void setHeadPolygons(List<Triangle> inputPolygons){};
     public void setWingsPolygons(List<Triangle> inputPolygons){};
 
+    @Override
+    public void dosmth() {
+
+    }
+
 }

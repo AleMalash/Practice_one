@@ -16,4 +16,9 @@ public class Mouse extends Model implements Body, Fingers, Head, Limb, Toes, Tai
     public void setLimbPolygons(List<Triangle> inputPolygons){};
     public void setToesPolygons(List<Triangle> inputPolygons){};
     public void setTailPolygons(List<Triangle> inputPolygons){};
+
+    @Override
+    public void dosmth() {
+
+    }
 }

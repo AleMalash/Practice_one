@@ -11,11 +11,42 @@ package Abstract;
 import java.util.List;
 import Entity.Fundamental.Triangle;
 import Entity.Fundamental.Vertex;
+import Entity.Human;
+import org.apache.log4j.Logger;
 
 public abstract class Model {
+    private static final Logger log = Logger.getLogger(Human.class);
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+        log.info("Name has been initialized!");
+    }
+
+    String name;
+
+    public List<Triangle> getContent() {
+        return content;
+    }
+
+    public void setContent(List<Triangle> content) {
+        this.content = content;
+        log.info("Content has been initialized!");
+    }
 
     protected List<Triangle> content;
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+        log.info("Weight has been initialized!");
+    }
+
     double weight;
+
+    public abstract void dosmth();
 
     public void treangulate(){
         List<Triangle> temp = content;
@@ -33,11 +64,17 @@ public abstract class Model {
             content.add(temp.get(count));
         }
         calculateweight();
+        log.info("Model has been treangulated!");
     }
 
     public void calculateweight(){
         this.weight = content.size() * 1.65;
+        log.info("Weight has been update!");
     }
 
     public double getWeight(){return weight;}
 }
+
+//Add unittests, logs, mock-tests
+//big decimal - for money
+// double - negative pow of 2

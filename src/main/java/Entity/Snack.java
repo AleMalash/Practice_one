@@ -12,4 +12,9 @@ import java.util.List;
 public class Snack extends Model implements Body {
     public void setBodyPolygons(List<Triangle> inputPolygons){};
 
+    @Override
+    public void dosmth() {
+
+    }
+
 }
